@@ -1,0 +1,218 @@
+BODY { font-size:8pt;font-family:Tahoma; }
+TR,TD,P { font-size:8pt;line-height:17px; }
+TABLE {	border:0px solid gray;padding:0px;/*border-collapse: collapse*/}
+INPUT.btn
+{
+	color:#222222;
+	font-size:8pt;
+	font-family:'trebuchet ms',helvetica,sans-serif;
+	font-weight:bold;
+	/* font: bold 90% 'trebuchet ms',helvetica,sans-serif;
+	background-color:#cccccc;   
+	border: solid 1px;
+	border-color: #444444; */
+	margin-right:2px;
+}
+A
+{
+    COLOR: navy;
+    TEXT-DECORATION: none
+}
+A:hover
+{
+    TEXT-DECORATION: underline; color:red;
+}
+
+.submit_white 
+{ 
+	font-size:7pt;
+	font-family:Tahoma;
+}
+
+.input_text
+{
+	font-size:8pt;
+	font-family:Tahoma;
+	color:#000000;
+	background-color: #FFFFFF;
+}
+
+.small
+{
+    FONT-FAMILY: Tahoma;
+    FONT-SIZE: 8pt
+}
+.side
+{
+    FONT-FAMILY: Tahoma;
+    FONT-SIZE: 7pt;
+    COLOR: white;
+    line-height:12px;
+    font-weight:500
+}
+.copyright
+{
+    FONT-FAMILY: Tahoma;
+    FONT-SIZE: 8pt;
+    line-height:12px;
+}
+.tiny
+{
+    FONT-FAMILY: Tahoma;
+    FONT-SIZE: 7pt;
+    line-height:12px;
+}
+.sidetitle
+{
+    FONT-FAMILY: Tahoma;
+    FONT-SIZE: 8pt;
+    COLOR: navy;
+    line-height:12px;
+    font-weight:bold
+}
+.rma_number
+{
+    FONT-FAMILY: 'trebuchet ms',helvetica,sans-serif;
+    FONT-SIZE: 14pt;
+    COLOR: black;
+	font-weight:bold;
+}
+.listing_table
+{
+	border : solid 1px gray;
+	FONT-FAMILY: Tahoma;
+	FONT-SIZE: 8pt;
+	line-height:12px;
+}	
+.navigation
+{
+    FONT-FAMILY: Tahoma;
+    FONT-SIZE: 7pt;
+    COLOR: white;
+    line-height:12px;
+    font-weight:bold
+}
+.std
+{
+    FONT-FAMILY: Tahoma;
+    line-height : 12px;
+    FONT-SIZE: 9pt
+}
+.heading
+{
+    FONT-FAMILY: Tahoma;
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: bold
+}
+.bigheading
+{
+    COLOR: #800000;
+    FONT-FAMILY: Tahoma;
+    FONT-SIZE: 14pt;
+    FONT-WEIGHT: bold
+}
+.tableRed
+{
+    BACKGROUND-COLOR: #ff0000;
+    COLOR: #ffffff;
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: bold
+}
+
+.ListRMAStatusClose { background-color: #e5ffe5; }
+.ListRMAStatusOpen { background-color: #ffe5e5; }
+.ListRMAStatusUnknown { background-color: #dddddd; }
+
+.RMAStatusClose { background-color: #80ff80; }
+.RMAStatusOpen { background-color: #ff8080; }
+.RMAStatusUnknown { background-color: #888888; }
+#rma_status_box
+{ 
+	margin:5 5 5 5px;
+	padding:4px;
+	width:100%;
+	height:30px;
+}
+#rma_status_box .statustext
+{
+	
+	float:left;
+	width:50%;
+	height:100%;
+	text-align:left;
+	font-family: 'trebuchet ms',helvetica,sans-serif;
+    font-size: 15px;
+    COLOR: black;
+	font-weight:bold;
+	/* background-color: red; */
+}
+#rma_status_box .statuschangebutton
+{
+	float:left;
+	text-align:right;
+	vertical-align:middle;
+	width:50%;
+	height:100%;
+	/* background-color: orange; */
+}
+
+#rma_main_inputtext_title
+{
+	vertical-align:middle;
+	height:100%;
+	float:left;
+	text-align:right;
+	margin-right:5px;
+}
+
+.whiteline
+{
+	border-style:solid none none none;
+	border-color:white;
+	border-width:1px;
+}
+
+.blackline
+{
+	border-style:solid none none none;
+	border-color:black;
+	border-width:1px;
+}
+
+.smallmenu { position : relative; visibility : hidden; }
+
+#result_history_frame { width:286px; height:356px; }
+#current_result { width:280px; height:350px; border: 0px none; }
+#result_history { width:280px; height:350px; border: 0px none; }
+
+
+#rmalist table
+{ 
+	border: 1px solid gray;
+	background-color:#ffffff;
+	border-collapse: collapse;
+}
+#rmalist td
+{ 
+	border : 1px solid gray;
+	vertical-align:top;
+	padding-left: 2px;
+	padding-top: 2px;
+}
+
+#rmalist .stitle
+{ 
+	background-color:gray;
+	text-align:center;
+	border : 1px solid white;
+	font-family: tahoma;
+	font-size: 8pt;
+	font-weight:bold;
+	color:#ffffff;
+	vertical-align:middle;
+}
+
+
+
+

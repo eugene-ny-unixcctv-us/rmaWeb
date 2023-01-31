@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0040)https://rma-tx.unixcctv.net/rma_main.asp -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<!--
+
+#TODO
+1. learn how scripts are working
+2. setup mongoDB server
+3. form factor (optional)
+4. upload to git (optional)
+
+
+-->
+
+
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<meta name="Author" content="PilDog">
+	<meta name="GENERATOR" content="NotePad">
+	<title>UNIX CCTV NY RMA Department</title>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+	<link rel="stylesheet" href="./calendar.css">
+</head>
+
+
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0">
+
+<table cellpadding="10px" cellspacing="0" width="800px" border="0" style="background-color:#0066cc">
+	<tbody>
+		<tr>
+			<td align="left" height="20px" valign="middle"><font style="font-size:20px;color:white"><b>UNIX CCTV NEW YORK RMA Department</b></font></td>
+		</tr>
+	</tbody>
+</table>
+
+<div style="width:800px;"> <!-- Main -->
+<div style="width:260px;height:750px;padding-left:30px;padding-right:10px;float:left;background-color:#0099ff"> <!-- Menu Left -->
+<form name="generate_rma" action="https://rma-tx.unixcctv.net/gen_rma.asp" method="get">
+<div style="width:100%;height:30px;margin-top:20px;">
+<input type="submit" style="height:100%" value="Issue a new RMA">
+</div>
+</form>
+
+<!-- DIV Spacer --><div style="width:100%;height:10px;"></div>
+<table width="100%" cellspacing="0">
+<tbody><tr>
+	<td align="left" valign="top">
+		<form action="https://rma-tx.unixcctv.net/listing.asp" method="post" name="rmalist" id="rmalist">
+		<font class="sidetitle">RMA Search</font>&nbsp;&nbsp;
+		<a href="javascript:void(0);" onclick="insertfield(&#39;companyname&#39;,&#39;&#39;);insertfield(&#39;items&#39;,&#39;&#39;);">Clear All</a>
+		<hr class="whiteline">
+		<font color="white"><b>by RMA #</b></font><br>
+		<input type="text" class="input_text" name="rmanum" id="rmanum" style="width:100px" maxlength="6" onkeypress="return submitenter(this,event)">
+<!-- DIV Spacer --><div style="height:10px"></div>
+		<hr class="whiteline">
+		<font color="white"><b>by date range</b></font><br>
+		<input class="input_text" type="text" name="searchdatefrom" id="searchdatefrom" style="width:60px;height:100%" value="11/16/2022">
+		<script language="JavaScript">
+		new tcal ({
+			'formname': 'rmalist',
+			'controlname': 'searchdatefrom',
+			'today' : '11/16/2022'
+		});
+		</script><img src="./UNIX CCTV RMA Department_files/cal.gif" id="tcalico_0" onclick="A_TCALS[&#39;0&#39;].f_toggle()" class="tcalIcon" alt="Open Calendar">
+		&nbsp;~&nbsp;
+		<input class="input_text" type="text" name="searchdateto" id="searchdateto" style="width:60px;height=100%" value="11/16/2022">
+		<script language="JavaScript">
+		new tcal ({
+			'formname': 'rmalist',
+			'controlname': 'searchdateto',
+			'today' : '11/16/2022'
+		});
+		</script><img src="./UNIX CCTV RMA Department_files/cal.gif" id="tcalico_1" onclick="A_TCALS[&#39;1&#39;].f_toggle()" class="tcalIcon" alt="Open Calendar">
+<!-- DIV Spacer --><div style="height:5px"></div>
+			<a href="javascript:void(0);" onclick="insertfield(&#39;searchdatefrom&#39;,&#39;11/15/2022&#39;);insertfield(&#39;searchdateto&#39;,&#39;11/16/2022&#39;);">From Last Business Day</a>&nbsp;|&nbsp;
+		<a href="javascript:void(0);" onclick="insertfield(&#39;searchdatefrom&#39;,&#39;11/16/2022&#39;);insertfield(&#39;searchdateto&#39;,&#39;11/16/2022&#39;);">Today</a>&nbsp;|&nbsp;
+		<a href="javascript:void(0);" onclick="insertfield(&#39;searchdatefrom&#39;,&#39;11/9/2022&#39;);insertfield(&#39;searchdateto&#39;,&#39;11/16/2022&#39;);">From a week ago</a>
+<!-- DIV Spacer --><div style="height:5px"></div>
+		<font color="white"><b>Date Type</b></font><br>
+		 <select name="datetype" class="input_text">
+			<option value="issued" selected="">Issued Date</option>
+			<option value="updated">Updated Date</option>
+		</select><br>
+<!-- DIV Spacer --><div style="height:10px"></div>
+		<hr class="whiteline">
+		<font color="white"><b>by RMA Status</b></font><br>
+		<select name="statustype" class="input_text">
+			<option value="all" selected="">Show all</option>
+			<option value="open">Open (not finished)</option>
+			<option value="closed">Closed (finished)</option>
+			<option value="unknown">Unknown</option>
+		</select> 
+<!-- DIV Spacer --><div style="height:10px"></div>
+		<hr class="whiteline">
+		<font color="white"><b>by Company Name</b></font><br>
+		<input type="text" class="input_text" name="companyname" id="companyname" size="30"> &nbsp;<a href="javascript:void(0);" onclick="insertfield(&#39;companyname&#39;,&#39;&#39;);">Clear</a><br>
+<!-- DIV Spacer --><div style="height:10px"></div>
+		<hr class="whiteline">
+		<font color="white"><b>by Item</b></font><br>
+		<input type="text" class="input_text" name="items" id="items" size="30"> &nbsp;<a href="javascript:void(0);" onclick="insertfield(&#39;items&#39;,&#39;&#39;);">Clear</a>
+<!-- DIV Spacer --><div style="height:20px"></div>
+		<input type="button" value="Search RMA" onclick="validateForm();" style="height:30px">
+		</form>
+<!-- DIV Spacer --><div style="height:30px"></div>
+		<font class="sidetitle">Item Sold Trace</font>&nbsp;&nbsp;
+		<a href="javascript:void(0);" onclick="insertfield(&#39;customerid&#39;,&#39;&#39;);insertfield(&#39;itemid&#39;,&#39;&#39;);">Clear All</a>
+		<hr class="whiteline">
+		<form action="https://rma-tx.unixcctv.net/itemsoldtrace.asp" method="get" name="rmalist">
+		<!-- DIV Spacer --><div style="width:100%;height:10px;"></div>
+		<font color="white"><b>Customer ID (ex. 1004123)</b></font><br>
+		<input type="text" class="input_text" name="customerid" id="customerid" size="30">
+		<!-- DIV Spacer --><div style="height:10px"></div>
+		<font color="white"><b>Item Code</b></font><br>
+		<input type="text" class="input_text" name="itemid" id="itemid" size="30">
+		<!-- DIV Spacer --><div style="height:20px"></div>
+		<input type="submit" value="Trace" style="height:30px">
+		</form>
+	</td>
+</tr>
+</tbody></table>
+</div> <!-- Menu Left -->
+<div style="width:500px;float:left;"> <!-- Menu Right -->
+<div style="padding:10px"> <!-- Menu Right padding -->
+	<table cellpadding="0" cellspacing="0" width="100%">
+	<tbody><tr><td height="15"></td></tr>
+	<tr><td class="sidetitle">RMA Status for 11/16/2022</td></tr>
+	<tr><td>
+		<table cellpadding="1" cellspacing="1" width="100%" cols="3">
+		<tbody><tr>
+			<td width="12%" class="tiny" align="CENTER" bgcolor="GRAY"><font color="WHITE">RMA #</font></td>
+			<td width="68%" class="tiny" align="left" bgcolor="GRAY"><font color="WHITE">Name</font></td>
+			<td width="20%" class="tiny" align="left" bgcolor="GRAY"><font color="WHITE">Issued</font></td>
+		</tr>
+		
+		<tr>
+			<td class="tiny" align="CENTER"><a href="https://rma-tx.unixcctv.net/status.asp?rmanum=102938">102938</a></td>
+			<td class="tiny" align="left">UNLIMITED INTEGRATION LLC</td>
+			<td class="tiny" align="left">TX        </td>
+		</tr>
+		
+		<tr>
+			<td class="tiny" align="CENTER"><a href="https://rma-tx.unixcctv.net/status.asp?rmanum=102939">102939</a></td>
+			<td class="tiny" align="left">GLOBAL INDUSTRIAL SUPPLY</td>
+			<td class="tiny" align="left">TX        </td>
+		</tr>
+		
+		</tbody></table>
+	</td></tr>
+	</tbody></table>
+</div> <!-- Menu Right padding -->
+</div> <!-- Menu Right -->
+</div> <!-- Main -->
+<table cellpadding="0" cellspacing="0" width="100%">
+	<tbody>
+		<tr>
+			<td>
+				<b>Version 0.1.3.<br> Read <a href="https://rma-tx.unixcctv.net/patch.html" target="_blank"><b>Patch Note</b></a> for chanages</b>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<script language="Javascript1.2" src='./main.js'></script>
+<script language="JavaScript" src="./calendar_us.js.download"></script>
+<script type="text/javascript">
+<!--
+var rmanum_field = document.getElementById('rmanum');
+rmanum_field.focus();
+//-->
+</script>
+
+
+
+</body></html>
